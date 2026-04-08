@@ -3,6 +3,6 @@ RUN dnf install nginx -y
 RUN rm -rf /usr/share/nginx/html/index.html
 ADD https://raw.githubusercontent.com/daws-84s/notes/refs/heads/main/session-05.txt /usr/share/nginx/html/index.html
 RUN chmod +r /usr/share/nginx/html/index.html
-ADD sample-1.tar /temp
+ADD sample-1.tar /tmp/
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
